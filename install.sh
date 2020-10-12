@@ -15,11 +15,11 @@ echo "au inscriptionate diacritice pentru limba Romana fabricate de Apple, dar "
 echo "nu in pozitiile definite de SR 13392:2004. Acest tip de aranjament are o "
 echo "tasta suplimentara intre Shift si Z."
 echo
-read -p "Alege varianta aranjamentului (1 sau 2): " layout
+read -p "Alege varianta aranjamentului (1, 2 sau 3): " layout
 
-if [ "${layout}" != "1" ] && [ "${layout}" != "2" ]
+if [ "${layout}" != "1" ] && [ "${layout}" != "2" ] && [ "${layout}" != "3" ]
 then
-	echo "Aranjamentul ales este invalid. Valori acceptate: 1 sau 2."
+	echo "Aranjamentul ales este invalid. Valori acceptate: 1, 2 sau 3."
 	exit 1
 fi
 
@@ -43,11 +43,11 @@ else
 	echo "» Instalez Romanian - Programmers folosind GitHub"
 	echo "» Instalez Romanian - Programmers.icns"
 	sudo curl --silent --location --max-redirs 10 \
-"https://raw.githubusercontent.com/SaltwaterC/romanian-programmers-mac/master/Romanian%20-%20Programmers.icns" \
+"https://raw.githubusercontent.com/SliMM/romanian-programmers-mac/master/Romanian%20-%20Programmers.icns" \
 --output "/Library/Keyboard Layouts/Romanian - Programmers.icns"
 	echo "» Instalez Romanian - Programmers ${layout}.keylayout"
 	sudo curl --silent --location --max-redirs 10 \
-"https://raw.githubusercontent.com/SaltwaterC/romanian-programmers-mac/master/Romanian%20-%20Programmers%20${layout}.keylayout" \
+"https://raw.githubusercontent.com/SliMM/romanian-programmers-mac/master/Romanian%20-%20Programmers%20${layout}.keylayout" \
 --output "/Library/Keyboard Layouts/Romanian - Programmers.keylayout"
 fi
 
